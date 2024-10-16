@@ -179,3 +179,36 @@ form button {
     height: auto; /* Maintain aspect ratio */
     display: block; /* Block-level to prevent inline spacing */
 }
+/* Make the video section responsive */
+.video-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px; /* Added gap between videos */
+}
+
+.video {
+    width: 100%; /* Full width on smaller screens */
+    max-width: 100%; /* Ensure it doesn't exceed the parent container width */
+    margin-bottom: 20px; /* Space between video cards */
+}
+
+.video iframe {
+    width: 100%; /* Make the iframe responsive */
+    height: auto; /* Automatically adjust height to maintain aspect ratio */
+    aspect-ratio: 16/9; /* Set aspect ratio for videos */
+}
+
+/* For larger screens (tablets and up), make videos side by side */
+@media (min-width: 768px) {
+    .video {
+        width: 48%; /* Two videos per row on tablets */
+    }
+}
+
+/* For desktops, adjust to three videos per row */
+@media (min-width: 1024px) {
+    .video {
+        width: 30%; /* Three videos per row on desktop */
+    }
+}
