@@ -1,0 +1,693 @@
+/* Simple Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #1a1a1a; /* Dark background */
+    color: #ffffff; /* Light text */
+    line-height: 1.6;
+}
+
+header {
+    background-color: #0d0d0d; /* Slightly darker background for header */
+    padding: 1rem 0;
+    text-align: center;
+    border-bottom: 3px solid #00ffff; /* Neon blue accent */
+}
+
+header h1 {
+    font-size: 2.5rem;
+    color: #00ffff; /* Neon blue accent */
+}
+
+nav ul {
+    list-style: none;
+    text-align: center;
+    padding: 1rem 0;
+    background-color: #262626; /* Dark gray for nav */
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 1.1rem;
+}
+
+nav ul li a:hover {
+    color: #00ffff; /* Neon blue accent on hover */
+}
+
+main {
+    padding: 20px;
+}
+
+#hero {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #262626; /* Dark gray for hero section */
+    border-radius: 8px;
+    margin-bottom: 30px; /* Increased margin */
+}
+
+#hero h2 {
+    font-size: 2.2rem; /* Slightly larger */
+    margin-bottom: 15px; /* Increased margin */
+    color: #00ffff; /* Neon blue accent */
+}
+
+#hero p {
+    margin-bottom: 20px;
+    font-size: 1.1rem;
+}
+
+.cta-button {
+    display: inline-block;
+    background-color: #00ffff; /* Neon blue */
+    color: #0d0d0d; /* Dark text for contrast */
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    margin: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #ffffff; /* White on hover */
+    color: #000000; /* Black text on hover */
+}
+
+/* Styling for new sections */
+#about, #latest-videos, #upcoming-events {
+    padding: 20px;
+    margin-bottom: 30px;
+    background-color: #262626; /* Dark gray for sections */
+    border-radius: 8px;
+}
+
+#about h2, #latest-videos h2, #upcoming-events h2 {
+    font-size: 1.8rem;
+    color: #00ffff; /* Neon blue accent */
+    margin-bottom: 15px;
+    border-bottom: 2px solid #00ffff; /* Neon blue underline for headings */
+    padding-bottom: 5px;
+}
+
+.video-placeholders {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap; /* Allows wrapping on smaller screens */
+}
+
+.video-placeholder {
+    background-color: #333333; /* Darker placeholder background */
+    color: #cccccc; /* Light gray text for placeholder */
+    padding: 40px 20px; /* Placeholder size */
+    margin: 10px;
+    text-align: center;
+    border-radius: 5px;
+    width: calc(33.333% - 20px); /* Adjust width for 3 items with margin */
+    min-width: 150px; /* Minimum width for smaller screens */
+}
+
+.event {
+    background-color: #333333; /* Darker background for event items */
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    border-left: 5px solid #00ffff; /* Neon blue accent on the left */
+}
+
+.event h3 {
+    font-size: 1.4rem;
+    color: #ffffff;
+    margin-bottom: 5px;
+}
+
+.event p {
+    font-size: 1rem;
+    color: #cccccc; /* Lighter text for event details */
+}
+
+/* About Page Specific Styles */
+#about-page {
+    padding: 20px;
+    background-color: #262626; /* Dark gray for section */
+    border-radius: 8px;
+    margin-bottom: 30px;
+}
+
+#about-page h2 {
+    font-size: 1.8rem;
+    color: #00ffff; /* Neon blue accent */
+    margin-bottom: 20px;
+    text-align: center;
+    border-bottom: 2px solid #00ffff;
+    padding-bottom: 10px;
+}
+
+.dj-image-placeholder {
+    width: 200px; /* Or desired width */
+    height: 200px; /* Or desired height */
+    background-color: #333333;
+    color: #cccccc;
+    text-align: center;
+    line-height: 200px; /* Vertically center text */
+    margin: 0 auto 20px auto; /* Center the placeholder */
+    border-radius: 50%; /* Circular placeholder */
+    border: 3px solid #00ffff; /* Neon blue border */
+}
+
+.biography p {
+    font-size: 1.1rem;
+    color: #e0e0e0; /* Slightly lighter text for readability */
+    margin-bottom: 15px;
+    line-height: 1.7;
+    text-align: justify; /* Justify text for a cleaner look */
+}
+
+/* Music & Videos Page Specific Styles */
+#music-videos-page {
+    padding: 20px;
+    background-color: #262626; /* Dark gray for section */
+    border-radius: 8px;
+    margin-bottom: 30px;
+}
+
+#music-videos-page h2 { /* Main heading "Music & Videos" */
+    font-size: 1.8rem;
+    color: #00ffff; /* Neon blue accent */
+    margin-bottom: 25px;
+    text-align: center;
+    border-bottom: 2px solid #00ffff;
+    padding-bottom: 10px;
+}
+
+#music-videos-page h3 { /* Subheadings like "Latest Mixes" */
+    font-size: 1.5rem;
+    color: #00ffff; /* Neon blue accent */
+    margin-top: 30px;
+    margin-bottom: 15px;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #444444; /* Subtle underline for subheadings */
+}
+
+.video-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Responsive grid */
+    gap: 20px; /* Space between video items */
+    margin-bottom: 30px;
+}
+
+.video-placeholder-item {
+    background-color: #333333;
+    color: #cccccc;
+    padding: 20px;
+    text-align: center;
+    border-radius: 8px;
+    border: 2px solid #00ffff; /* Neon blue border */
+    aspect-ratio: 16 / 9; /* Maintain video aspect ratio */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.1rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.video-placeholder-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 255, 255, 0.2); /* Neon blue glow */
+}
+
+#streaming-platforms {
+    text-align: center;
+    margin-top: 40px;
+}
+
+#streaming-platforms p {
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+}
+
+.streaming-links {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.streaming-button {
+    display: inline-block;
+    background-color: #00ffff; /* Neon blue */
+    color: #0d0d0d; /* Dark text */
+    padding: 12px 25px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+}
+
+.streaming-button:hover {
+    background-color: #ffffff; /* White on hover */
+    color: #000000; /* Black text */
+    transform: translateY(-3px);
+}
+
+/* Events Page Specific Styles */
+#events-page {
+    padding: 20px;
+    background-color: #262626; /* Dark gray for section */
+    border-radius: 8px;
+    margin-bottom: 30px;
+}
+
+#events-page h2 { /* Main heading "Events" */
+    font-size: 1.8rem;
+    color: #00ffff; /* Neon blue accent */
+    margin-bottom: 25px;
+    text-align: center;
+    border-bottom: 2px solid #00ffff;
+    padding-bottom: 10px;
+}
+
+#events-page h3 { /* Subheadings like "Upcoming Events" */
+    font-size: 1.5rem;
+    color: #00ffff; /* Neon blue accent */
+    margin-top: 30px;
+    margin-bottom: 15px;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #444444; /* Subtle underline */
+}
+
+.event-list {
+    display: grid;
+    grid-template-columns: 1fr; /* Single column layout */
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.event-item {
+    background-color: #333333;
+    padding: 20px;
+    border-radius: 8px;
+    border-left: 5px solid #444444; /* Default border */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.event-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+.event-item h4 { /* Event Title */
+    font-size: 1.3rem;
+    color: #ffffff;
+    margin-bottom: 10px;
+}
+
+.event-item p {
+    font-size: 1rem;
+    color: #cccccc;
+    margin-bottom: 8px;
+    line-height: 1.5;
+}
+
+.event-item p strong {
+    color: #e0e0e0;
+}
+
+/* Differentiate Upcoming Events */
+.upcoming-event {
+    border-left-color: #00ffff; /* Neon blue accent for upcoming events */
+    background-color: #3a3a3a; /* Slightly lighter background for emphasis */
+}
+
+.upcoming-event h4 {
+    color: #00ffff; /* Neon blue title for upcoming events */
+}
+
+.past-event {
+    opacity: 0.8; /* Slightly faded for past events */
+}
+
+.event-button {
+    display: inline-block;
+    background-color: #00ffff; /* Neon blue */
+    color: #0d0d0d; /* Dark text */
+    padding: 8px 15px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    margin-top: 10px;
+    font-size: 0.9rem;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.event-button:hover {
+    background-color: #ffffff; /* White on hover */
+    color: #000000; /* Black text */
+}
+
+/* Contact Page Specific Styles */
+#contact-page {
+    padding: 20px;
+    background-color: #262626; /* Dark gray for section */
+    border-radius: 8px;
+    margin-bottom: 30px;
+}
+
+#contact-page h2 { /* Main heading "Get In Touch" */
+    font-size: 1.8rem;
+    color: #00ffff; /* Neon blue accent */
+    margin-bottom: 25px;
+    text-align: center;
+    border-bottom: 2px solid #00ffff;
+    padding-bottom: 10px;
+}
+
+#contact-page h3 { /* Subheadings */
+    font-size: 1.5rem;
+    color: #00ffff; /* Neon blue accent */
+    margin-top: 30px;
+    margin-bottom: 20px; /* Increased bottom margin */
+    padding-bottom: 5px;
+    border-bottom: 1px solid #444444; /* Subtle underline */
+}
+
+/* Contact Form Styling */
+#contact-form-section {
+    margin-bottom: 40px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    color: #e0e0e0;
+    margin-bottom: 8px;
+    font-size: 1.1rem;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #444444;
+    background-color: #1a1a1a;
+    color: #ffffff;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-group input[type="text"]:focus,
+.form-group input[type="email"]:focus,
+.form-group textarea:focus {
+    border-color: #00ffff; /* Neon blue border on focus */
+    box-shadow: 0 0 8px rgba(0, 255, 255, 0.3); /* Neon blue glow on focus */
+    outline: none;
+}
+
+.form-button {
+    display: inline-block;
+    background-color: #00ffff; /* Neon blue */
+    color: #0d0d0d; /* Dark text */
+    padding: 12px 25px;
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+}
+
+.form-button:hover {
+    background-color: #ffffff; /* White on hover */
+    color: #000000; /* Black text */
+    transform: translateY(-3px);
+}
+
+/* Social Media Section Styling */
+#social-media-section {
+    text-align: center;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 10px;
+}
+
+.social-link {
+    display: inline-block;
+    background-color: #333333;
+    color: #00ffff; /* Neon blue text */
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 1rem;
+    border: 1px solid #00ffff; /* Neon blue border */
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+}
+
+.social-link:hover {
+    background-color: #00ffff; /* Neon blue background on hover */
+    color: #0d0d0d; /* Dark text on hover */
+    transform: translateY(-3px);
+}
+
+/* Specific social media colors (optional, if icons are not used) */
+.social-link.tiktok { /* No specific color needed if using general style */ }
+.social-link.youtube { /* No specific color needed if using general style */ }
+.social-link.facebook { /* No specific color needed if using general style */ }
+.social-link.instagram { /* No specific color needed if using general style */ }
+
+/* TikTok Section Styling */
+#latest-tiktok {
+    padding: 20px;
+    margin-bottom: 30px;
+    background-color: #262626; /* Dark gray for sections */
+    border-radius: 8px;
+    text-align: center; /* Center the heading and grid */
+}
+
+#latest-tiktok h2 {
+    font-size: 1.8rem;
+    color: #00ffff; /* Neon blue accent */
+    margin-bottom: 20px;
+    border-bottom: 2px solid #00ffff; /* Neon blue underline for headings */
+    padding-bottom: 10px;
+    display: inline-block; /* To make border-bottom only span the text width */
+}
+
+.tiktok-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive grid */
+    gap: 20px;
+    justify-content: center; /* Center items in the grid if they don't fill the row */
+}
+
+.tiktok-placeholder {
+    background-color: #1a1a1a; /* Very dark background for placeholder card */
+    border: 1px solid #00ffff; /* Neon blue border */
+    border-radius: 8px;
+    padding: 15px;
+    text-align: center;
+    /* The actual TikTok embed will control its own styling,
+       but this provides a fallback visual container. */
+}
+
+.tiktok-placeholder .tiktok-embed {
+    /* TikTok's embed script will handle the iframe styling.
+       The inline styles on the blockquote (max-width, min-width)
+       are part of the standard TikTok embed code. */
+    margin: 0 auto; /* Center the blockquote if it's narrower than the placeholder */
+}
+
+.tiktok-caption {
+    color: #cccccc;
+    font-size: 0.9rem;
+    margin-top: 10px;
+}
+
+/* Ensure the TikTok script doesn't cause layout shifts if it loads late */
+script[async][src*="tiktok.com/embed.js"] {
+    display: none; /* Hide the script element itself */
+}
+
+footer {
+    text-align: center;
+    padding: 1rem 0;
+    background-color: #0d0d0d; /* Slightly darker background for footer */
+    border-top: 3px solid #00ffff; /* Neon blue accent */
+    /* position: fixed; */ /* Removed fixed position to allow scrolling */
+    bottom: 0;
+    width: 100%;
+    margin-top: 30px; /* Add margin to avoid overlap with content */
+}
+
+/* Hamburger Menu Styling */
+.hamburger-menu {
+    display: none; /* Hidden by default, shown in media query */
+    background: none;
+    border: none;
+    color: #00ffff; /* Neon blue */
+    font-size: 1.8rem; /* Adjust size as needed */
+    cursor: pointer;
+    padding: 0.5rem;
+    position: absolute; /* Or relative to header, adjust as needed */
+    top: 1.2rem; /* Adjust as needed */
+    right: 1rem; /* Adjust as needed */
+    z-index: 1001; /* Ensure it's above other elements */
+}
+
+.hamburger-menu span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: #00ffff;
+    margin: 5px 0;
+    transition: 0.4s;
+}
+
+/* Styling for nav when mobile menu is active */
+nav.mobile-nav {
+    display: block; /* Shown when .mobile-nav class is added */
+    position: absolute;
+    top: 60px; /* Adjust based on header height */
+    left: 0;
+    width: 100%;
+    background-color: #1a1a1a; /* Or a slightly different shade */
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    border-bottom: 2px solid #00ffff;
+}
+
+nav.mobile-nav ul {
+    text-align: center;
+}
+
+nav.mobile-nav ul li {
+    display: block; /* Stack links vertically */
+    margin: 0;
+    padding: 0.8rem 0; /* Add padding to each link */
+    border-bottom: 1px solid #333333; /* Separator for links */
+}
+
+nav.mobile-nav ul li:last-child {
+    border-bottom: none;
+}
+
+nav.mobile-nav ul li a {
+    font-size: 1.2rem; /* Larger font for mobile */
+    display: block; /* Make entire area clickable */
+}
+
+
+/* Media Queries for Responsiveness */
+@media screen and (max-width: 768px) {
+    header h1 {
+        font-size: 2rem; /* Slightly smaller H1 for mobile */
+    }
+
+    .hamburger-menu {
+        display: block; /* Show hamburger menu */
+    }
+
+    nav {
+        display: none; /* Hide default nav by default on mobile */
+    }
+    
+    nav.mobile-nav { /* This will be toggled by JS */
+      /* Styles for when mobile nav is active are above */
+      /* Initially, it might be display: none; and JS adds .mobile-nav to nav element
+         OR nav has .mobile-nav always and JS toggles a .nav-active class on nav */
+    }
+
+
+    #hero h2 {
+        font-size: 1.8rem;
+    }
+
+    #hero p {
+        font-size: 1rem;
+    }
+
+    .cta-button {
+        padding: 8px 15px;
+        font-size: 0.9rem;
+    }
+
+    /* Adjust grid layouts for smaller screens */
+    .video-placeholders {
+        flex-direction: column; /* Stack video placeholders */
+        align-items: center;
+    }
+
+    .video-placeholder {
+        width: 90%; /* Make placeholders wider on mobile */
+        min-width: unset; /* Remove min-width */
+        margin-bottom: 15px;
+    }
+    
+    .video-grid, .tiktok-grid {
+        grid-template-columns: 1fr; /* Single column for videos/TikToks */
+        gap: 15px;
+    }
+
+    .video-placeholder-item {
+        font-size: 1rem;
+    }
+
+    .dj-image-placeholder {
+        width: 150px;
+        height: 150px;
+        line-height: 150px;
+    }
+
+    .biography p {
+        font-size: 1rem;
+    }
+
+    .form-group input[type="text"],
+    .form-group input[type="email"],
+    .form-group textarea {
+        padding: 10px;
+        font-size: 0.9rem;
+    }
+
+    .form-button {
+        padding: 10px 20px;
+        font-size: 1rem;
+    }
+
+    .social-links {
+        gap: 10px;
+    }
+
+    .social-link {
+        padding: 8px 15px;
+        font-size: 0.9rem;
+    }
+    
+    /* Footer adjustments if needed */
+    footer {
+        font-size: 0.9rem;
+    }
+}
